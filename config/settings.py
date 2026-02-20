@@ -170,7 +170,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static') #
+STATIC_ROOT = "/var/www/fintechhub-15/timberland-backend-v1/static"
 
 # This is a list of additional directories where Django will look for static files 
 # during development (and for collectstatic to copy from).
