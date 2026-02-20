@@ -170,13 +170,13 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-if DEBUG:
-    STATICFILES_DIRS = [
-        BASE_DIR / 'static'
-    ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static') #
 
-STATIC_ROOT = 'static/'
-
+# This is a list of additional directories where Django will look for static files 
+# during development (and for collectstatic to copy from).
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'), # This 'static' folder is for your project's source static files
+]
 
 
 # Default primary key field type
