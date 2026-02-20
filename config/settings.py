@@ -175,7 +175,7 @@ STATIC_ROOT = "/var/www/fintechhub-15/timberland-backend-v1/static"
 # This is a list of additional directories where Django will look for static files 
 # during development (and for collectstatic to copy from).
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'), # This 'static' folder is for your project's source static files
+    "/var/www/fintechhub-15/timberland-backend-v1/static", # This 'static' folder is for your project's source static files
 ]
 
 
