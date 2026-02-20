@@ -168,16 +168,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
+
 STATIC_URL = 'static/'
 
-STATIC_ROOT = "/var/www/fintechhub-15/timberland-backend-v1/static"
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # This is a list of additional directories where Django will look for static files 
 # during development (and for collectstatic to copy from).
-STATICFILES_DIRS = [
-    "/var/www/fintechhub-15/timberland-backend-v1/static", # This 'static' folder is for your project's source static files
-]
-
+if DEBUG:
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, "static"),
+    ]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
